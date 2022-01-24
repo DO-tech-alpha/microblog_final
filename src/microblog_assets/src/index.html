@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Microblog</title>
+    <base href="/" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  </head>
+  <body>
+    <header><h1>Microblog</h1></header>
+    <main>
+      <label for="set_name">Set name</label>
+      <br />
+      <input id="set_name" />
+      <br />
+      <button id="set_name_button">Set</button>
+      &nbsp;<span id="set_error"></span>
+      <br />
+
+      <label for="follow">Follow user</label>
+      <br />
+      <input id="follow" />
+      <br />
+      <button id="follow_button">Follow</button>
+      &nbsp;<span id="follow_error"></span>
+      <br />
+
+      <label for="message">What do yout want to do?</label>
+      <br />
+      <textarea id="message"></textarea>
+      <br />
+      <button id="post_button">Post</button>
+      &nbsp;<span id="post_error"></span>
+      <br />
+
+      <h2>Follows</h2>
+      <section id="follows"></section>
+
+      <h2 id="timeline_title">Timeline</h2>
+      <section id="timeline"></section>
+
+      <h2>Posts</h2>
+      <section id="posts"></section>
+    </main>
+  </body>
+</html>

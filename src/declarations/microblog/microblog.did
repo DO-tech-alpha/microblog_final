@@ -1,0 +1,23 @@
+type Time = int;
+type MessageExt = 
+ record {
+   author: text;
+   author_canister_id: text;
+   content: text;
+   time: Time;
+ };
+type Message = 
+ record {
+   author: text;
+   content: text;
+   time: Time;
+ };
+service : {
+  follow: (principal) -> ();
+  follows: () -> (vec principal) query;
+  get_name: () -> (opt text);
+  post: (text) -> ();
+  posts: (Time) -> (vec Message) query;
+  set_name: (text) -> ();
+  timeline: (Time) -> (vec MessageExt);
+}
